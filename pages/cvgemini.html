@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Optional: Custom Tailwind configuration
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              // You can define custom colors here to easily reuse them
+              primary: "#1f2937", // A dark gray
+              accent: "#14b8a6", // A bright teal
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-100 font-sans text-gray-800">
+    <div class="container mx-auto max-w-5xl my-8 p-4">
+      <div
+        class="bg-white shadow-2xl rounded-lg overflow-hidden flex flex-col md:flex-row"
+      >
+        <aside class="w-full md:w-1/3 bg-primary text-white p-8">
+          <div class="flex flex-col items-center">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Profile Picture"
+              class="rounded-full w-40 h-40 border-4 border-accent object-cover mb-4"
+            />
+
+            <h1 class="text-3xl font-display font-bold text-center">
+              ALEX DOE
+            </h1>
+            <p class="text-lg text-accent font-medium mt-1">
+              Senior Full-Stack Developer
+            </p>
+          </div>
+
+          <div class="mt-10">
+            <h2
+              class="text-xl font-display font-semibold border-b-2 border-accent pb-2"
+            >
+              Contact
+            </h2>
+            <ul class="mt-4 space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-phone w-6 text-accent"></i
+                ><span>+1 234 567 890</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope w-6 text-accent"></i
+                ><span>alex.doe@email.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt w-6 text-accent"></i
+                ><span>San Francisco, CA</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-linkedin w-6 text-accent"></i
+                ><span>/in/alexdoe</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-github w-6 text-accent"></i
+                ><span>/alexdoegit</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-10">
+            <h2
+              class="text-xl font-display font-semibold border-b-2 border-accent pb-2"
+            >
+              Skills
+            </h2>
+            <ul class="mt-4 space-y-4">
+              <li>
+                <p class="font-medium">JavaScript (React, Node.js)</p>
+                <div class="bg-gray-600 rounded-full h-2.5 mt-1">
+                  <div class="bg-accent h-2.5 rounded-full w-11/12"></div>
+                </div>
+              </li>
+              <li>
+                <p class="font-medium">Python (Django)</p>
+                <div class="bg-gray-600 rounded-full h-2.5 mt-1">
+                  <div class="bg-accent h-2.5 rounded-full w-10/12"></div>
+                </div>
+              </li>
+              <li>
+                <p class="font-medium">Databases (SQL, MongoDB)</p>
+                <div class="bg-gray-600 rounded-full h-2.5 mt-1">
+                  <div class="bg-accent h-2.5 rounded-full w-10/12"></div>
+                </div>
+              </li>
+              <li>
+                <p class="font-medium">DevOps (Docker, CI/CD)</p>
+                <div class="bg-gray-600 rounded-full h-2.5 mt-1">
+                  <div class="bg-accent h-2.5 rounded-full w-9/12"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-10">
+            <h2
+              class="text-xl font-display font-semibold border-b-2 border-accent pb-2"
+            >
+              Languages
+            </h2>
+            <ul class="mt-4 space-y-2">
+              <li>English <span class="text-gray-400">- Native</span></li>
+              <li>Spanish <span class="text-gray-400">- Professional</span></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main class="w-full md:w-2/3 p-8">
+          <section>
+            <h2
+              class="text-2xl font-display font-bold text-primary border-b-4 border-accent pb-2"
+            >
+              Profile
+            </h2>
+            <p class="mt-4 text-gray-700">
+              Results-driven Senior Full-Stack Developer with over 8 years of
+              experience designing, developing, and deploying robust web
+              applications. Proficient in a wide range of technologies with a
+              strong focus on the MERN stack and cloud infrastructure.
+              Passionate about writing clean, efficient code and collaborating
+              to deliver outstanding products.
+            </p>
+          </section>
+
+          <section class="mt-8">
+            <h2
+              class="text-2xl font-display font-bold text-primary border-b-4 border-accent pb-2"
+            >
+              Work Experience
+            </h2>
+            <div class="mt-6">
+              <h3 class="text-xl font-bold text-accent">
+                Senior Full-Stack Developer
+              </h3>
+              <p class="font-semibold">
+                Innovatech Solutions Inc. | Jan 2021 - Present
+              </p>
+              <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                <li>
+                  Led the development of a high-traffic e-commerce platform,
+                  increasing user engagement by 40%.
+                </li>
+                <li>
+                  Engineered a scalable microservices architecture using Node.js
+                  and Docker, reducing server costs by 30%.
+                </li>
+                <li>
+                  Mentored a team of 4 junior developers, improving code quality
+                  and team productivity.
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-xl font-bold text-accent">
+                Mid-Level Web Developer
+              </h3>
+              <p class="font-semibold">
+                Creative Web Agency | Jun 2017 - Dec 2020
+              </p>
+              <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                <li>
+                  Developed responsive user interfaces for client websites using
+                  React and Redux.
+                </li>
+                <li>
+                  Built custom RESTful APIs to support mobile and web
+                  applications.
+                </li>
+                <li>
+                  Collaborated with designers to translate UI/UX wireframes into
+                  functional code.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="mt-8">
+            <h2
+              class="text-2xl font-display font-bold text-primary border-b-4 border-accent pb-2"
+            >
+              Education
+            </h2>
+            <div class="mt-6">
+              <h3 class="text-xl font-bold text-accent">
+                Master of Science in Computer Science
+              </h3>
+              <p class="font-semibold">Stanford University | 2015 - 2017</p>
+              <p class="text-gray-700 mt-1">
+                Specialized in Artificial Intelligence. Graduated with a 3.9
+                GPA.
+              </p>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-xl font-bold text-accent">
+                Bachelor of Science in Software Engineering
+              </h3>
+              <p class="font-semibold">University of Florida | 2011 - 2015</p>
+              <p class="text-gray-700 mt-1">
+                Graduated Summa Cum Laude. President of the University Coding
+                Club.
+              </p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
