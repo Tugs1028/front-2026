@@ -29,18 +29,13 @@ export default function Home() {
   ];
 
   const repeated = [...products, ...products, ...products];
-
-  // ✅ Add search state
   const [searchTerm, setSearchTerm] = useState("");
-
-  // ✅ Filter products by search term
   const filteredProducts = repeated.filter((p) =>
     p.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="min-h-screen bg-black text-white font-sans flex flex-col">
-      {/* Header */}
       <header className="flex items-center justify-between px-6 h-16 border-b border-gray-800">
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
@@ -59,7 +54,6 @@ export default function Home() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          {/* ✅ Search input connected to state */}
           <input
             type="text"
             placeholder="Search for products..."
@@ -72,10 +66,7 @@ export default function Home() {
           </button>
         </div>
       </header>
-
-      {/* Main Featured Section */}
       <main className="flex flex-col md:flex-row gap-4 p-6 justify-center items-center h-[70vh]">
-        {/* Left: Big Product */}
         <div className="flex-[2] bg-neutral-900 rounded-2xl flex items-center justify-center relative h-full overflow-hidden">
           <img
             src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=1920&q=75"
@@ -89,8 +80,6 @@ export default function Home() {
             </span>
           </div>
         </div>
-
-        {/* Right: Two stacked products */}
         <div className="flex-[1] flex flex-col gap-4 h-full">
           <div className="bg-neutral-900 rounded-2xl flex items-center justify-center relative flex-1 overflow-hidden">
             <img
@@ -121,8 +110,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      {/* 🔥 Scrolling Product Row */}
       <section className="mt-8 overflow-hidden">
         {filteredProducts.length === 0 ? (
           <p className="text-gray-500 text-center py-8">No products found.</p>
@@ -146,8 +133,6 @@ export default function Home() {
             ))}
           </div>
         )}
-
-        {/* Inline Keyframes */}
         <style jsx>{`
           @keyframes scroll {
             0% {
@@ -164,8 +149,6 @@ export default function Home() {
           }
         `}</style>
       </section>
-
-      {/* ⚫ Footer Section */}
       <footer className="mt-10 bg-[#111] border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex items-center gap-2">

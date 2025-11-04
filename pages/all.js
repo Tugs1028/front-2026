@@ -5,7 +5,7 @@ export default function All() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedProduct, setSelectedProduct] = useState(null); // 🟢 NEW
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const categories = [
     "All",
@@ -29,8 +29,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=1920&q=75",
       category: "Electronics",
-      description:
-        "Mechanical keyboard with RGB lighting and premium switches.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=1920&q=75",
       ],
@@ -41,7 +39,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-color-black.png%3Fv%3D1690003675&w=1920&q=75",
       category: "Shirts",
-      description: "60% combed ringspun cotton/40% polyester jersey tee.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-color-black.png%3Fv%3D1690003675&w=1920&q=75",
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=1920&q=75",
@@ -55,7 +52,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&w=1920&q=75",
       category: "Hoodies",
-      description: "Comfortable cotton blend hoodie with drawstring hood.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&w=1920&q=75",
       ],
@@ -68,7 +64,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=1920&q=75",
       category: "Shirts",
-      description: "Classic fit t-shirt with circle design.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=1920&q=75",
       ],
@@ -81,7 +76,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=1920&q=75",
       category: "Shirts",
-      description: "Premium cotton t-shirt with prism graphic.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=1920&q=75",
       ],
@@ -94,7 +88,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fcowboy-hat-black-1.png%3Fv%3D1690208765&w=1920&q=75",
       category: "Headwear",
-      description: "Classic western style cowboy hat.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fcowboy-hat-black-1.png%3Fv%3D1690208765&w=1920&q=75",
       ],
@@ -105,7 +98,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fshoes-1.png%3Fv%3D1690004109&w=1920&q=75",
       category: "Footwear",
-      description: "Comfortable slip-on shoes for everyday wear.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fshoes-1.png%3Fv%3D1690004109&w=1920&q=75",
       ],
@@ -116,7 +108,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fsticker-rainbow.png%3Fv%3D1690003602&w=1920&q=75",
       category: "Stickers",
-      description: "Vibrant rainbow sticker, weather resistant.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fsticker-rainbow.png%3Fv%3D1690003602&w=1920&q=75",
       ],
@@ -127,7 +118,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fcup-black.png%3Fv%3D1690003088&w=1920&q=75",
       category: "Drinkware",
-      description: "Insulated cup keeps drinks hot or cold.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fcup-black.png%3Fv%3D1690003088&w=1920&q=75",
       ],
@@ -138,7 +128,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbomber-jacket-army.png%3Fv%3D1690002722&w=1920&q=75",
       category: "Jackets",
-      description: "Stylish bomber jacket with warm insulation.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbomber-jacket-army.png%3Fv%3D1690002722&w=1920&q=75",
       ],
@@ -151,7 +140,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbaby-cap-black.png%3Fv%3D1690002570&w=1920&q=75",
       category: "Headwear",
-      description: "Soft cotton cap for babies.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbaby-cap-black.png%3Fv%3D1690002570&w=1920&q=75",
       ],
@@ -162,7 +150,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbaby-onesie-beige-1.png%3Fv%3D1690002632&w=1920&q=75",
       category: "Kids",
-      description: "Comfortable onesie for infants.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbaby-onesie-beige-1.png%3Fv%3D1690002632&w=1920&q=75",
       ],
@@ -175,7 +162,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fsticker.png%3Fv%3D1690003619&w=1920&q=75",
       category: "Stickers",
-      description: "Official Acme logo sticker.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fsticker.png%3Fv%3D1690003619&w=1920&q=75",
       ],
@@ -186,7 +172,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fmug-1.png%3Fv%3D1690003527&w=1920&q=75",
       category: "Drinkware",
-      description: "Ceramic mug with Acme branding.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fmug-1.png%3Fv%3D1690003527&w=1920&q=75",
       ],
@@ -197,7 +182,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbag-1-dark.png%3Fv%3D1689796304&w=1920&q=75",
       category: "Bags",
-      description: "Lightweight drawstring bag for daily use.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbag-1-dark.png%3Fv%3D1689796304&w=1920&q=75",
       ],
@@ -208,7 +192,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fpacifier-1.png%3Fv%3D1690003544&w=1920&q=75",
       category: "Kids",
-      description: "BPA-free baby pacifier.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fpacifier-1.png%3Fv%3D1690003544&w=1920&q=75",
       ],
@@ -221,7 +204,6 @@ export default function All() {
       image:
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fdog-sweater-1.png%3Fv%3D1690003132&w=1920&q=75",
       category: "Pets",
-      description: "Warm sweater for small dogs.",
       images: [
         "https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fdog-sweater-1.png%3Fv%3D1690003132&w=1920&q=75",
       ],
@@ -233,8 +215,6 @@ export default function All() {
       (activeCategory === "All" || p.category === activeCategory) &&
       p.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  // 🟢 Product Detail Component
   const ProductDetail = ({ product, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [selectedColor, setSelectedColor] = useState(
@@ -262,7 +242,6 @@ export default function All() {
           </div>
 
           <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Product Image */}
             <div className="relative bg-black rounded-xl overflow-hidden flex items-center justify-center h-[500px]">
               <img
                 src={product.images[currentImageIndex]}
@@ -298,8 +277,6 @@ export default function All() {
                 </div>
               )}
             </div>
-
-            {/* Product Info */}
             <div className="flex flex-col gap-6">
               <h1 className="text-3xl font-bold">{product.name}</h1>
 
@@ -308,8 +285,6 @@ export default function All() {
                   {product.price}
                 </span>
               </div>
-
-              {/* Color Selection */}
               {isClothing && product.colors && (
                 <div>
                   <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-3">
@@ -332,8 +307,6 @@ export default function All() {
                   </div>
                 </div>
               )}
-
-              {/* Size Selection */}
               {isClothing && product.sizes && (
                 <div>
                   <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-3">
@@ -356,13 +329,9 @@ export default function All() {
                   </div>
                 </div>
               )}
-
-              {/* Description */}
               <p className="text-gray-400 leading-relaxed">
                 {product.description}
               </p>
-
-              {/* Add to Cart */}
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 rounded-full flex items-center justify-center gap-2 transition text-lg">
                 <span className="text-2xl">+</span>
                 Add To Cart
@@ -376,7 +345,6 @@ export default function All() {
 
   return (
     <div className="min-h-screen bg-black text-white flex">
-      {/* LEFT SIDEBAR */}
       <aside className="hidden md:flex flex-col w-56 border-r border-gray-800 p-6 text-sm gap-3">
         <h2 className="text-gray-400 uppercase tracking-wider text-xs mb-3">
           Collections
@@ -395,10 +363,7 @@ export default function All() {
           </button>
         ))}
       </aside>
-
-      {/* MAIN */}
       <div className="flex-1">
-        {/* HEADER */}
         <header className="flex items-center justify-between px-6 h-16 border-b border-gray-800 relative">
           <div className="flex items-center gap-8">
             <a href="/biydaalt1" className="font-semibold">
@@ -468,8 +433,6 @@ export default function All() {
             </div>
           )}
         </header>
-
-        {/* PRODUCTS GRID */}
         <main className="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.length === 0 ? (
             <p className="text-gray-500 text-center col-span-full">
@@ -479,7 +442,7 @@ export default function All() {
             filteredProducts.map((product, i) => (
               <div
                 key={i}
-                onClick={() => setSelectedProduct(product)} // 🟢 CLICK TO OPEN
+                onClick={() => setSelectedProduct(product)}
                 className="bg-neutral-900 rounded-2xl overflow-hidden relative hover:scale-[1.02] transition-transform cursor-pointer"
               >
                 <img
@@ -498,8 +461,6 @@ export default function All() {
           )}
         </main>
       </div>
-
-      {/* 🟢 PRODUCT DETAIL MODAL */}
       {selectedProduct && (
         <ProductDetail
           product={selectedProduct}
