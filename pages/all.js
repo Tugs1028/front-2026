@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function All() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -215,6 +217,7 @@ export default function All() {
       (activeCategory === "All" || p.category === activeCategory) &&
       p.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   const ProductDetail = ({ product, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [selectedColor, setSelectedColor] = useState(
@@ -243,10 +246,12 @@ export default function All() {
 
           <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="relative bg-black rounded-xl overflow-hidden flex items-center justify-center h-[500px]">
-              <img
+              <Image
                 src={product.images[currentImageIndex]}
                 alt={product.name}
-                className="object-contain w-full h-full p-8"
+                fill
+                unoptimized
+                className="object-contain p-8"
               />
 
               {product.images.length > 1 && (
@@ -285,6 +290,7 @@ export default function All() {
                   {product.price}
                 </span>
               </div>
+
               {isClothing && product.colors && (
                 <div>
                   <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-3">
@@ -307,6 +313,7 @@ export default function All() {
                   </div>
                 </div>
               )}
+
               {isClothing && product.sizes && (
                 <div>
                   <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-3">
@@ -329,9 +336,6 @@ export default function All() {
                   </div>
                 </div>
               )}
-              <p className="text-gray-400 leading-relaxed">
-                {product.description}
-              </p>
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 rounded-full flex items-center justify-center gap-2 transition text-lg">
                 <span className="text-2xl">+</span>
                 Add To Cart
@@ -345,6 +349,7 @@ export default function All() {
 
   return (
     <div className="min-h-screen bg-black text-white flex">
+      {/* Sidebar */}
       <aside className="hidden md:flex flex-col w-56 border-r border-gray-800 p-6 text-sm gap-3">
         <h2 className="text-gray-400 uppercase tracking-wider text-xs mb-3">
           Collections
@@ -363,23 +368,25 @@ export default function All() {
           </button>
         ))}
       </aside>
+
+      {/* Main */}
       <div className="flex-1">
         <header className="flex items-center justify-between px-6 h-16 border-b border-gray-800 relative">
           <div className="flex items-center gap-8">
-            <a href="/biydaalt1" className="font-semibold">
+            <Link href="/biydaalt1" className="font-semibold">
               ACME STORE
-            </a>
+            </Link>
 
             <nav className="hidden md:flex gap-6 text-gray-400">
-              <a href="/all" className="text-white font-medium">
+              <Link href="/all" className="text-white font-medium">
                 All
-              </a>
-              <a href="#" className="hover:text-white">
+              </Link>
+              <Link href="#" className="hover:text-white">
                 Shirts
-              </a>
-              <a href="#" className="hover:text-white">
+              </Link>
+              <Link href="#" className="hover:text-white">
                 Stickers
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -391,11 +398,9 @@ export default function All() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="hidden sm:block bg-neutral-900 text-sm text-gray-300 px-4 py-2 rounded-md w-64 outline-none placeholder-gray-500"
             />
-
             <button className="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-md">
               🛒
             </button>
-
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="md:hidden w-10 h-10 flex items-center justify-center border border-gray-700 rounded-md"
@@ -422,7 +427,6 @@ export default function All() {
                   {cat}
                 </button>
               ))}
-
               <input
                 type="text"
                 placeholder="Search..."
@@ -433,6 +437,7 @@ export default function All() {
             </div>
           )}
         </header>
+
         <main className="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.length === 0 ? (
             <p className="text-gray-500 text-center col-span-full">
@@ -445,11 +450,15 @@ export default function All() {
                 onClick={() => setSelectedProduct(product)}
                 className="bg-neutral-900 rounded-2xl overflow-hidden relative hover:scale-[1.02] transition-transform cursor-pointer"
               >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="object-contain w-full h-[280px] bg-black"
-                />
+                <div className="relative w-full h-[280px] bg-black">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    unoptimized
+                    className="object-contain"
+                  />
+                </div>
                 <div className="absolute bottom-4 left-4 flex items-center gap-3 bg-black/70 px-4 py-2 rounded-full border border-gray-700">
                   <span className="text-sm font-medium">{product.name}</span>
                   <span className="bg-blue-600 text-sm px-3 py-1 rounded-full">
@@ -461,6 +470,7 @@ export default function All() {
           )}
         </main>
       </div>
+
       {selectedProduct && (
         <ProductDetail
           product={selectedProduct}

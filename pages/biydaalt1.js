@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const products = [
@@ -42,15 +44,15 @@ export default function Home() {
             <span className="font-semibold">ACME STORE</span>
           </div>
           <nav className="hidden md:flex gap-6 text-gray-400">
-            <a href="/all" className="hover:text-white">
+            <Link href="/all" className="hover:text-white">
               All
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="#" className="hover:text-white">
               Shirts
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="#" className="hover:text-white">
               Stickers
-            </a>
+            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-4">
@@ -66,12 +68,14 @@ export default function Home() {
           </button>
         </div>
       </header>
+
       <main className="flex flex-col md:flex-row gap-4 p-6 justify-center items-center h-[70vh]">
         <div className="flex-[2] bg-neutral-900 rounded-2xl flex items-center justify-center relative h-full overflow-hidden">
-          <img
+          <Image
             src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=1920&q=75"
             alt="T-shirt"
-            className="object-contain max-h-full w-full h-full"
+            fill
+            className="object-contain"
           />
           <div className="absolute bottom-6 left-6 flex items-center gap-4 bg-black/70 backdrop-blur-md px-4 py-2 rounded-full border border-gray-700">
             <span className="font-medium">Acme Circles T-Shirt</span>
@@ -80,12 +84,14 @@ export default function Home() {
             </span>
           </div>
         </div>
+
         <div className="flex-[1] flex flex-col gap-4 h-full">
           <div className="bg-neutral-900 rounded-2xl flex items-center justify-center relative flex-1 overflow-hidden">
-            <img
+            <Image
               src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fbag-1-dark.png%3Fv%3D1689796304&w=1920&q=75"
               alt="Drawstring Bag"
-              className="object-contain w-full h-full p-6"
+              fill
+              className="object-contain p-6"
             />
             <div className="absolute bottom-4 left-4 flex items-center gap-3 bg-black/70 px-4 py-2 rounded-full border border-gray-700">
               <span>Acme Drawstring Bag</span>
@@ -96,10 +102,11 @@ export default function Home() {
           </div>
 
           <div className="bg-neutral-900 rounded-2xl flex items-center justify-center relative flex-1 overflow-hidden">
-            <img
+            <Image
               src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fcup-black.png%3Fv%3D1690003088&w=1920&q=75"
               alt="Acme Cup"
-              className="object-contain w-full h-full p-6"
+              fill
+              className="object-contain p-6"
             />
             <div className="absolute bottom-4 left-4 flex items-center gap-3 bg-black/70 px-4 py-2 rounded-full border border-gray-700">
               <span>Acme Cup</span>
@@ -110,6 +117,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+
       <section className="mt-8 overflow-hidden">
         {filteredProducts.length === 0 ? (
           <p className="text-gray-500 text-center py-8">No products found.</p>
@@ -120,9 +128,11 @@ export default function Home() {
                 key={index}
                 className="bg-neutral-900 rounded-2xl flex-shrink-0 w-[400px] h-[200px] flex flex-col items-center justify-center hover:scale-[1.03] transition-transform duration-300 overflow-hidden"
               >
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
+                  width={200}
+                  height={120}
                   className="object-contain h-[120px]"
                 />
                 <div className="mt-3 text-center">
@@ -149,6 +159,7 @@ export default function Home() {
           }
         `}</style>
       </section>
+
       <footer className="mt-10 bg-[#111] border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex items-center gap-2">
@@ -156,24 +167,24 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-2 text-gray-400 text-sm">
-            <a href="#" className="hover:text-white">
+            <Link href="#" className="hover:text-white">
               Home
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="#" className="hover:text-white">
               About
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="#" className="hover:text-white">
               Terms & Conditions
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="#" className="hover:text-white">
               Shipping & Return Policy
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="#" className="hover:text-white">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="#" className="hover:text-white">
               FAQ
-            </a>
+            </Link>
           </div>
 
           <div className="flex justify-end items-start">
@@ -186,9 +197,9 @@ export default function Home() {
         <div className="border-t border-gray-800 text-gray-500 text-sm py-4 flex flex-col md:flex-row justify-between items-center px-6">
           <div>
             © 2023–2025 ACME, Inc. All rights reserved.{" "}
-            <a href="#" className="underline hover:text-white ml-2">
+            <Link href="#" className="underline hover:text-white ml-2">
               View the source
-            </a>
+            </Link>
           </div>
           <div className="flex items-center gap-1 mt-2 md:mt-0">
             <span>Created by</span>
